@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Дневник заметок">
+    <title>Дневник заметок</title>
+    <link rel="icon" href="favicon.svg">
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.5; color: #333; }
+        h1, h2 { color: #1f4e79; }
+        nav a { margin-right: 12px; }
+        form, table { border: 1px solid #ccc; padding: 12px; margin-bottom: 16px; }
+        table, th, td { border: 1px solid #999; border-collapse: collapse; }
+        th, td { padding: 8px 12px; }
+        th { background: #e8f1fa; }
+        label { display: block; margin-top: 8px; }
+        footer { text-align: center; color: #999; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Дневник заметок</h1>
+        <p>Твой личный дневник для важных мыслей и заметок.</p>
+        <img src="images/logo.svg" alt="Логотип Дневника заметок" width="120">
+    </header>
+
+    <nav>
+        <a href="#add">Добавить заметку</a>
+        <a href="#data">Мои заметки</a>
+        <a href="#help">Помощь</a>
+        <a href="https://github.com/0nixxis" target="_blank">Мой GitHub</a>
+    </nav>
+
+    <main>
+        <section id="add">
+            <h2>Новая заметка</h2>
+            <form action="#" method="get">
+                <label for="title">Название</label>
+                <input type="text" id="title" name="title" placeholder="Например: идея для проекта" required>
+                <label for="text">Текст заметки</label>
+                <textarea id="text" name="text" rows="3" cols="40" placeholder="Что вы хотите записать?"></textarea>
+                <label for="cat">Категория</label>
+                <select id="cat" name="cat">
+                    <option value="study">Учёба</option>
+                    <option value="personal">Личное</option>
+                    <option value="ideas">Идеи</option>
+                </select>
+                <label for="date">Дата</label>
+                <input type="date" id="date" name="date">
+                <label for="importance">Важность</label>
+                <input type="number" id="importance" name="importance" min="1" max="5" value="3">
+                <button type="submit">Добавить</button>
+                <button type="reset">Очистить</button>
+            </form>
+        </section>
+
+        <section id="data">
+            <h2>Мои заметки</h2>
+            <table>
+                <caption>Пример наполнения дневника</caption>
+                <thead>
+                    <tr><th>Название</th><th>Категория</th><th>Дата</th><th>Важность</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Лабораторная работа</td><td>Учёба</td><td><time datetime="2026-10-17">17.10.2026</time></td><td>5</td></tr>
+                    <tr><td>Идея для сайта</td><td>Идеи</td><td><time datetime="2026-10-16">16.10.2026</time></td><td>4</td></tr>
+                    <tr><td>Купить продукты</td><td>Личное</td><td><time datetime="2026-10-15">15.10.2026</time></td><td>2</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><td colspan="4">Всего заметок: 3</td></tr>
+                </tfoot>
+            </table>
+            <figure>
+                <img src="images/notes.png" alt="Рабочее место для записи заметок">
+                <figcaption>Место для новых заметок</figcaption>
+            </figure>
+        </section>
+
+        <section id="help">
+            <h2>Помощь</h2>
+            <details>
+                <summary>Как добавить заметку?</summary>
+                <p>Заполните форму выше и нажмите «Добавить». Пока данные не сохраняются — JavaScript добавим позже.</p>
+            </details>
+            <details>
+                <summary>Что дальше?</summary>
+                <p>Следующая работа — оформление интерфейса на CSS.</p>
+            </details>
+            <label for="profile">Заполнение дневника:</label>
+            <progress id="profile" max="100" value="70">70%</progress>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026, Никита Шишелев · <a href="mailto:hatcker00@mail.ru">hatcker00@mail.ru</a></p>
+    </footer>
+</body>
+</html>
